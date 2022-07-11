@@ -1,0 +1,91 @@
+/*
+on peut creer des variables dans css 
+- il doivent etre ecrit sur root sous la forme --var:
+*/
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+:root{
+    --title: #f8c27a;
+    --textShadow: 0 2px 2px rgba(0,0,0,.7);
+    --boxShadow: 0 0px 10px rgba(0,0,0,.2);
+    /*on decale de 2 px a droite et 2 px en bas avec un noir d'opacité 0.7*/
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box ;
+    /*permet de reset tt les truc deja mis en html pas defaut
+    on repart à zeros*/
+}
+body{
+    font-size: 14px;
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh; /*on prend 100% de la hauteur de la page*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:sans-serif;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+
+}
+.container{
+    background-color: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: var(--boxShadow);
+}
+h1{
+    font-family: 'Luckiest Guy', cursive; 
+    margin-bottom: 15px;
+    color: blueviolet;
+    text-shadow: var(--textShadow);
+    display: inline-block;
+}
+.vies{
+    margin: 10px;
+}
+ion-icon{
+    font-size: 50px;
+    fill: red;
+    /*changer la taille et la couleur des petits coeurs*/
+}
+#inputBox{
+    background-color: crimson;
+    padding:15px;
+    border-radius: 5px;
+}
+#inputBox>label{
+    /*on selectionne le label dans le formulaire*/
+    display: block;
+    margin-bottom:8px ;
+}
+input,button{
+    outline: none;
+    border: none;
+    padding: 3px 20px;
+    border-radius: 5px;
+}
+button{
+    background-color: #8c75f7;
+    color: beige;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+button:hover{
+    transform: translate(-2px);
+    background-color:#ad9df7;
+}
+p#message{
+    margin: 20px auto 0 auto;
+}
+#rejouer{
+    display:none;
+    margin: 5px auto 0 auto;
+}
+#details{
+    font-weight: bold;
+    font-size: 10px;
+    margin-top: 10px;
+}
